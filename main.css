@@ -1,0 +1,15 @@
+.mainContainer{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 400px;
+    border: 1px solid red;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
