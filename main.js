@@ -15,17 +15,30 @@ var timestamp = '1364161424';
 
 function loginRequest()
 {
-    var http = new XMLHttpRequest();
-    http.open('POST', url, true);
-    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    http.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    http.setRequestHeader('Authorization', getAuthorization());
-    http.onreadystatechange = function() {//Call a function when the state changes.
-        if(http.readyState == 4 && http.status == 200) {
-            alert(http.responseText);
-        }
-    }
-    http.send();
+    // var http = new XMLHttpRequest();
+    // http.open('POST', url, true);
+    // http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    // http.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    // http.setRequestHeader('Authorization', getAuthorization());
+    // http.onreadystatechange = function() {//Call a function when the state changes.
+    //     if(http.readyState == 4 && http.status == 200) {
+    //         alert(http.responseText);
+    //     }
+    // }
+    // http.send();
+
+    fetch(url, {
+       method : 'POST',
+       headers : {
+         'Content-type' : 'application/x-www-form-urlencoded',
+         'Authorization' :   getAuthorization(),
+         'Access-Control-Allow-Origin' : '*/*'
+       } 
+    }).then((response) =>{
+        console.log("response", response);
+    }).catch((error) =>{
+        console.log("error", error);
+    });
 }
 
 var auth = 'OAuth oauth_consumer_key="OsP4fYleWKJceK5CyPkQdscYa",oauth_token="449848553-G9OPRRYStA9WmDvS9iZcX3wBRNgvWQtplLHprmkD",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1603028813",oauth_nonce="IdGko9EXuZm",oauth_version="1.0",oauth_callback="https%3A%2F%2Fnostalgic-lalande-f9f860.netlify.app%2FHome.html",oauth_signature="0hD8frUYHuzDjcIXUBv9VgUf8MA%3D"'
