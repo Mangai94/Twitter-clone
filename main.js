@@ -33,7 +33,7 @@ var auth = 'OAuth oauth_consumer_key="OsP4fYleWKJceK5CyPkQdscYa",oauth_token="44
 function getAuthorization()
 {
     return 'OAuth '                                         +
-        'oauth_callback="' + callbackUrl      + '", '+
+        'oauth_callback="' + encodeURIComponent('https://cors-anywhere.herokuapp.com/https://nostalgic-lalande-f9f860.netlify.app/Home.html')      + '", '+
         'oauth_consumer_key="'  + apiKey       + '", ' +
         'oauth_nonce="'         + nonce             + '", ' +
         'oauth_signature="'     + signature         + '", ' +
