@@ -33,7 +33,7 @@ function loginRequest()
          'Content-type' : 'application/x-www-form-urlencoded',
          'Authorization' :   getAuthorization(),
          'Access-Control-Allow-Origin' : '*/*',
-        "Access-Control-Allow-Headers":  "Origin, X-Requested-With, Content-Type, Accept"
+        "Access-Control-Allow-Headers":  "X-Requested-With, X-requested-by"
        } 
     }).then((response) =>{
         console.log("response", response);
