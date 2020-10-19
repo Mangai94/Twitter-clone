@@ -41,13 +41,14 @@ function loginRequest()
     });
 }
 
-var auth = 'OAuth oauth_consumer_key="OsP4fYleWKJceK5CyPkQdscYa",oauth_token="449848553-G9OPRRYStA9WmDvS9iZcX3wBRNgvWQtplLHprmkD",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1603028813",oauth_nonce="IdGko9EXuZm",oauth_version="1.0",oauth_callback="https%3A%2F%2Fnostalgic-lalande-f9f860.netlify.app%2FHome.html",oauth_signature="0hD8frUYHuzDjcIXUBv9VgUf8MA%3D"'
+//var auth = 'OAuth oauth_consumer_key="OsP4fYleWKJceK5CyPkQdscYa",oauth_token="449848553-G9OPRRYStA9WmDvS9iZcX3wBRNgvWQtplLHprmkD",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1603028813",oauth_nonce="IdGko9EXuZm",oauth_version="1.0",oauth_callback="https%3A%2F%2Fnostalgic-lalande-f9f860.netlify.app%2FHome.html",oauth_signature="0hD8frUYHuzDjcIXUBv9VgUf8MA%3D"'
 
 function getAuthorization()
 {
     return 'OAuth '                                         +
         'oauth_callback="' + encodeURIComponent('https://nostalgic-lalande-f9f860.netlify.app/Home.html')      + '", '+
         'oauth_consumer_key="'  + apiKey       + '", ' +
+        'oauth_consumer_secret="'  + apiSecretKey       + '", ' +
         'oauth_nonce="'         + nonce             + '", ' +
         'oauth_signature="'     + signature         + '", ' +
         'oauth_signature_method="HMAC-SHA1", '              +
