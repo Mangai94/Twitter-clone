@@ -28,7 +28,6 @@ function loginRequest()
 
     fetch(url, {
        method : 'POST',
-       mode : 'no-cors',
        headers : {
          'Content-type' : 'application/x-www-form-urlencoded',
          'Authorization' :   getAuthorization(),
