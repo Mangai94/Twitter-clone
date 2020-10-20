@@ -31,7 +31,7 @@ function loginRequest()
        headers : {
          'Content-type' : 'application/x-www-form-urlencoded',
          'Authorization' :   getAuthorization(),
-         'Access-Control-Allow-Origin' : '*/*',
+         'Access-Control-Allow-Origin' : '*',
         "Access-Control-Allow-Headers":  "X-Requested-With, X-requested-by"
        } 
     }).then((response) =>{
