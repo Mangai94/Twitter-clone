@@ -35,7 +35,8 @@ function loginRequest()
         "Access-Control-Allow-Headers":  "X-Requested-With, X-requested-by",
         "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS"
        } ,
-       mode : 'cors'
+       mode : 'cors',
+       credentials : 'include'
     }).then((response) =>{
         console.log("response", response);
     }).catch((error) =>{
