@@ -9,7 +9,7 @@ var accessToken = '449848553-G9OPRRYStA9WmDvS9iZcX3wBRNgvWQtplLHprmkD';
 var accessTokenSecret = 'BNq9pwLXLdDSUAO1w2j2hAbYbRs7NDjt9AFzoZCuIoLPF';
 var nonce = 'K7ny27JTpKVsTgdyLdDfmQQWVLERj2zAK5BslRsqyw';
 var signature = 'Pc%2BMLdv028fxCErFyi8KXFM%2BddU%3D';
-var callbackUrl = "https%3A%2F%2Fnostalgic-lalande-f9f860.netlify.app%2FHome.html";
+var callbackUrl = encodeURIComponent('https://nostalgic-lalande-f9f860.netlify.app/Home.html');
 var timestamp = '1364161424';
 
 function loginRequest()
