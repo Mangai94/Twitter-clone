@@ -32,8 +32,10 @@ function loginRequest()
          'Content-type' : 'application/x-www-form-urlencoded',
          'Authorization' :   getAuthorization(),
          'Access-Control-Allow-Origin' : '*',
-        "Access-Control-Allow-Headers":  "X-Requested-With, X-requested-by"
-       } 
+        "Access-Control-Allow-Headers":  "X-Requested-With, X-requested-by",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS"
+       } ,
+       mode : 'cors'
     }).then((response) =>{
         console.log("response", response);
     }).catch((error) =>{
